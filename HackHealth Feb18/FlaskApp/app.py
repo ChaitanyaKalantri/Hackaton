@@ -192,7 +192,7 @@ def getPreditionForUser(l):
         df.loc[df['no_employees'] == '100-500', ['no_employees']] = 4
         df.loc[df['no_employees'] == '500-1000', ['no_employees']] = 5
         df.loc[df['no_employees'] == 'More than 1000', ['no_employees']] = 6
-        print df.loc[0]
+        print(df.loc[0])
 
         return df
     global clf
@@ -264,8 +264,8 @@ def my_form_post():
          ]
 
     result = getPreditionForUser(l)
-    print l
-    print result
+    print(l)
+    print(result)
 
     if result[0] == 1:
         return render_template('Results.html')
